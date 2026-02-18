@@ -7,7 +7,7 @@ export default function AboutUsPage() {
       <div className="container p-5 text-center">
         <h2 className="h1 text-primary">CHI SIAMO</h2>
 
-        <p>
+        <p className="mt-5">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
           voluptatibus fugiat cupiditate excepturi quae praesentium vero
           blanditiis, similique ad aliquam! Amet corrupti qui, laborum beatae

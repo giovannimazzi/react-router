@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import NavBar from "../components/NavBar";
 
 const productsApiUrl = "https://fakestoreapi.com/products";
 
@@ -19,14 +18,11 @@ export default function ProductsPage() {
 
   return (
     <>
-      <NavBar />
-      <div className="container p-5 text-center">
-        <h2 className="h1 text-primary">PRODOTTI</h2>
-        <div className="row row-cols-1 row-cols-lg-2 g-5 mt-5">
-          {products.map((prod) => (
-            <ProductCard key={prod.id} item={prod} />
-          ))}
-        </div>
+      <h2 className="h1 text-primary">PRODOTTI</h2>
+      <div className="row row-cols-1 row-cols-lg-2 g-5 mt-5">
+        {products.map((prod) => (
+          <ProductCard key={prod.id} item={prod} />
+        ))}
       </div>
     </>
   );

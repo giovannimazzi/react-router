@@ -1,5 +1,26 @@
-# Assegnazione del gg/mm/20aa
+# Assegnazione del 18/02/2026
 
-**TITLE**
+**React Router Store**
 
-nome repo: `repo-name`
+nome repo: `react-router`
+
+**Consegna**
+
+Creiamo il frontend del nostro mini e-commerce e le sue pagine principali!
+Useremo Fake Store API come backend fittizio per simulare i dati dei prodotti.
+
+https://fakestoreapi.com/
+
+**Obiettivi**
+
+1. Installiamo **React Router DOM:** `npm i react-router-dom`
+2. Creiamo almeno 3 pagine principali:
+   - Homepage (con un messaggio di benvenuto o immagine promozionale)
+   - Chi siamo
+   - Prodotti (pagina che mostrerà la lista dei prodotti prendendoli da https://fakestoreapi.com/products)
+3. Implementiamo una Navbar visibile in tutte le pagine per navigare tra di esse
+
+**Bonus**
+
+- Centralizziamo la Navbar usando un componente `Layout`
+- Gestiamo la classe `active` per i link attivi nella Navbar

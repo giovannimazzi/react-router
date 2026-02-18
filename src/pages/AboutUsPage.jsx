@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import NavBar from "../components/NavBar";
 
 export default function AboutUsPage() {
   return (
     <>
-      <Link to="/">Home</Link>
+      <NavBar />
       <div className="container p-5 text-center">
         <h2 className="h1 text-primary">CHI SIAMO</h2>
 

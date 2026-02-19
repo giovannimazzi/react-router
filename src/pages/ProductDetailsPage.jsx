@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const productApiUrl = "https://fakestoreapi.com/products/:id";
 
@@ -19,6 +19,7 @@ export default function ProductDetailsPage() {
       .get(productApiUrl.replace(":id", id))
       .then((res) => {
         setProduct(res.data);
+        if (!res.data?.id) navigate("/products");
       })
       .catch((err) => {
         setError(err);
@@ -29,6 +30,8 @@ export default function ProductDetailsPage() {
   useEffect(() => {
     getProductData();
   }, [id]);
+
+  const navigate = useNavigate();
 
   if (loading) {
     return (
@@ -53,7 +56,7 @@ export default function ProductDetailsPage() {
       <h3 className="mt-5">{product.title}</h3>
       <img src={product.image} alt={product.title} className="mb-2 w-25" />
       <h4 className="text-muted">
-        {product.category} - € {product.price.toFixed(2)}
+        {product.category} - € {product.price?.toFixed(2)}
       </h4>
       <span>⭐{product.rating?.rate}</span>{" "}
       <span>👁️‍🗨️{product.rating?.count}</span>

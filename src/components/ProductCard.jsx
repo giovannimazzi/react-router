@@ -24,7 +24,7 @@ export default function ProductCard({ item }) {
               </Link>
 
               <h6 className="card-subtitle mb-2 text-body-secondary d-flex align-items-center">
-                {item.category} - € {item.price}
+                {item.category} - € {item.price.toFixed(2)}
               </h6>
               <div className="card-description my-3">
                 <p className="card-text">{item.description}</p>
